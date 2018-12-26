@@ -94,7 +94,6 @@ def build_tweet(subject):
     corpus = (' '.join(filter(None, tweet_bodies)))
     token_list = corpus.split(" ")
     token_list_cleaned = clean_token_list(token_list)
-
     bigrams = nltk.bigrams(token_list_cleaned)
     cfd = nltk.ConditionalFreqDist(bigrams)
 
