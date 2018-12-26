@@ -4,6 +4,9 @@ import pandas
 import numpy
 import math
 import random
+import os
+
+nltk.data.path.append(os.getcwd())
 
 
 def clean_token_list(token_list):
