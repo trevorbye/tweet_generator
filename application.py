@@ -13,6 +13,11 @@ def privacy_page():
     return render_template("privacy.html")
 
 
+@app.route("/about")
+def about_page():
+    return render_template("about.html")
+
+
 @app.route("/get-tweet")
 def build_tweet():
     subject_string_param = request.args.get("subject", default="", type=str)

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Generate Trump Tweets using AI. Choose a subject, and the algorithm uses a sample of 36,000 Tweets to build a hilarious new one!">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+        <title>About Trump Tweets</title>
+
+        <link rel="stylesheet" media="screen" href = "{{ url_for('static', filename='bootstrap.min.css') }}">
+        <link rel="stylesheet" media="screen" href = "{{ url_for('static', filename='main.css') }}">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+        <link rel="icon" type="image/png" href="favicon-16x16.png">
+
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <script>
+          (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-9484202365193890",
+            enable_page_level_ads: true
+          });
+        </script>
+    </head>
+
+    <body class="text-center" id="body-aux">
+
+    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+      <header class="masthead mb-auto">
+        <div class="inner">
+          <h3 class="masthead-brand">Trump Tweets Generator</h3>
+          <nav class="nav nav-masthead justify-content-center">
+            <a class="nav-link" href="/">Home</a>
+            <a class="nav-link" href="/privacy">Privacy</a>
+              <a class="nav-link active" href="/about">About</a>
+          </nav>
+        </div>
+      </header>
+
+      <main role="main" class="inner cover text-left" id="privacy">
+          <h1>How does Trump tweets generator work?</h1>
+          <br>
+
+          <p>Trump tweets generator uses AI/machine learning to generate new tweets from a sample (training data) of 36,000+ tweets.
+              This process is called "Natural Language Generation". This is a difficult area of machine learning because most ML models are primarily
+              used for prediction. However, we don't simply want to predict the order of words, because they will sound exactly like the sample. The key is to
+              introduce some sense of randomness, without completely losing grammatical structure.
+          </p>
+          <br>
+          <p>
+              This algorithm uses <code>bigram</code> generation to understand the relationship bewteen words. Bigrams are simply the frequency ranking of
+              words that occur after any word in a corpus. For example, the word <code>you</code> could have a bigram matrix of <code>[["are", 90], ["were", 10]]</code>.
+              In this example, the word <code>you</code> is followed by the word <code>are</code> 90% of the time, and <code>were</code> 10% of the time. As you generate each word
+              in a sequence, you then access the bigram matrix for that word, and select a new word that will come after it.
+          </p>
+          <br>
+          <p>
+              If you simply sample the most common word in each bigram matrix, the sequence generation will eventually loop the same phrase. This tool uses gamma distributions
+              to sample from the bigram matrix so that the most common word is not always chosen. Different words and parts of speech trigger different distributions,
+              so that text is generated with some coherence, yet also some randomness.
+          </p>
+          <br>
+          <p>
+              Libraries used in this tool include:
+          </p>
+          <ul>
+              <li><code>scikit-learn</code></li>
+              <li><code>nltk</code></li>
+          </ul>
+      </main>
+
+      <footer class="mastfoot mt-auto">
+        <div class="inner">
+          <p>Built with <img src="/static/python-logo.png" alt="python-logo-image-build" width="35" height="35"></p>
+        </div>
+      </footer>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script type = "text/javascript" src = "/static/bootstrap.min.js"></script>
+    <script type = "text/javascript" src = "/static/main.js"></script>
+
+  </body>
+</html>
