@@ -103,6 +103,18 @@ def build_tweet(subject):
         .replace("\"", "")\
         .replace(" i ", " I ")
     tweet = tweet.lstrip(" ")
-    tweet = "\"" + tweet + "\""
+    tweet = tweet.capitalize()
 
+    ind = 0
+    end_chars = [".", "!", "?"]
+    strip_val = False
+    for character in reversed(tweet):
+        if ind == 1 and character in end_chars:
+            strip_val = True
+            break
+        ind += 1
+
+    if strip_val:
+        tweet = tweet[:-1]
+    tweet = "\"" + tweet + "\""
     return tweet

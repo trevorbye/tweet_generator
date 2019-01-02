@@ -12,6 +12,7 @@ $(function() {
             success: function(response) {
                 $("#loading").hide();
                 $("#output-text").text(response)
+                $("#output-title").text(subject)
             }
         });
     });
