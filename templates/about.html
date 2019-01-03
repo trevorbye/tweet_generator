@@ -12,14 +12,6 @@
         <link rel="stylesheet" media="screen" href = "{{ url_for('static', filename='main.css') }}">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
         <link rel="icon" type="image/png" href="favicon-16x16.png">
-
-        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <script>
-          (adsbygoogle = window.adsbygoogle || []).push({
-            google_ad_client: "ca-pub-9484202365193890",
-            enable_page_level_ads: true
-          });
-        </script>
     </head>
 
     <body class="text-center" id="body-aux">
@@ -56,7 +48,7 @@
           <p>
               If you simply sample the most common word in each bigram matrix, the sequence generation will eventually loop the same phrase. This tool uses gamma distributions
               to sample from the bigram matrix so that the most common word is not always chosen. Different words and parts of speech trigger different distributions,
-              so that text is generated with some coherence, yet also some randomness.
+              so that text is generated with some coherence, yet also some randomness. In the future, more complex NLG methods may be used, including GPU-trained RNN's.
           </p>
           <br>
           <p>
