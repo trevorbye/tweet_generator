@@ -13,9 +13,9 @@ def privacy_page():
     return render_template("privacy.html")
 
 
-@app.route("/about")
-def about_page():
-    return render_template("about.html")
+#@app.route("/about")
+#def about_page():
+    #return render_template("about.html")
 
 
 @app.route("/get-tweet")

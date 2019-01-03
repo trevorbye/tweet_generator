@@ -24,146 +24,119 @@
 
     <body class="text-center" id="body-main">
 
-    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
-        <header class="masthead mb-5" id="header-panel">
-            <div class="inner">
-                <h3 class="masthead-brand">Trump Tweets Generator</h3>
-                <nav class="nav nav-masthead justify-content-center">
-                    <a class="nav-link active" href="/">Home</a>
-                    <a class="nav-link" href="/privacy">Privacy</a>
-                    <a class="nav-link" href="/about">About</a>
-                </nav>
-            </div>
-        </header>
+        <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+            <header class="masthead mb-5" id="header-panel">
+                <div class="inner">
+                    <h3 class="masthead-brand">Trump Tweets Generator</h3>
+                    <nav class="nav nav-masthead justify-content-center">
+                        <a class="nav-link active" href="/">Home</a>
+                        <a class="nav-link" href="/privacy">Privacy</a>
+                    </nav>
+                </div>
+            </header>
 
-      <main role="main" class="inner cover mt-5">
-        <h1 class="cover-heading">Create Trump tweets with AI</h1>
-          <p class="text-left">Run AI on a sample of 36,000+ of the Donald's Tweets, and build a new random Tweet by selecting a starting word!</p>
+            <main role="main" class="inner cover mt-5">
+                <h1 class="cover-heading">Create Trump tweets with AI</h1>
+                <p class="text-left">Run AI on a sample of 36,000+ of the Donald's Tweets, and build a new random Tweet by selecting a starting word!</p>
 
-          <form id="main-form" class="form-inline">
-              <div class="form-group mr-2">
-                  <select id="select-box" class="form-control" style="width:250px">
-                      <option selected>Worst</option>
-                      <option>tremendous</option>
-                      <option>Idiot</option>
-                      <option>Mexico</option>
-                      <option>Obama</option>
-                      <option>Fake</option>
-                      <option>Hillary</option>
-                      <option>Democrats</option>
-                      <option>Loser</option>
-                      <option>Republicans</option>
-                      <option>China</option>
-                      <option>Crooked</option>
-                      <option>America</option>
-                      <option>ObamaCare</option>
-                      <option>Fantastic</option>
-                      <option>Iran</option>
-                      <option>Syria</option>
-                      <option>terrible</option>
-                      <option>greatest</option>
-                      <option>massive</option>
-                      <option>Russia</option>
-                      <option>Stormy</option>
-                      <option>Witch</option>
-                      <option>women</option>
-                      <option>Border</option>
-                      <option>weak</option>
-                      <option>failed</option>
-                      <option>Korea</option>
-                      <option>immigration</option>
-                      <option>jokers</option>
-                  </select>
-              </div>
+                <form id="main-form" class="form-inline">
+                    <div class="form-group mr-2">
+                        <select id="select-box" class="form-control" style="width:250px">
+                            <option selected>Worst</option>
+                            <option>tremendous</option>
+                            <option>Idiot</option>
+                            <option>Mexico</option>
+                            <option>Obama</option>
+                            <option>Fake</option>
+                            <option>Hillary</option>
+                            <option>Democrats</option>
+                            <option>Loser</option>
+                            <option>Republicans</option>
+                            <option>China</option>
+                            <option>Crooked</option>
+                            <option>America</option>
+                            <option>ObamaCare</option>
+                            <option>Fantastic</option>
+                            <option>Iran</option>
+                            <option>Syria</option>
+                            <option>terrible</option>
+                            <option>greatest</option>
+                            <option>massive</option>
+                            <option>Russia</option>
+                            <option>Stormy</option>
+                            <option>Witch</option>
+                            <option>women</option>
+                            <option>Border</option>
+                            <option>weak</option>
+                            <option>failed</option>
+                            <option>Korea</option>
+                            <option>immigration</option>
+                            <option>jokers</option>
+                        </select>
+                    </div>
 
-              <div class="form-group mr-2">
-                  <button type="submit" class="btn btn-primary" id="create-tweet">Create Tweet</button>
-              </div>
+                    <div class="form-group mr-2">
+                        <button type="submit" class="btn btn-primary" id="create-tweet">Create Tweet</button>
+                    </div>
 
-              <div class="form-group ml-2" id="loading" style="display: none">
-                <i class="fa fa-spinner fa-spin fa-2x" aria-hidden="true"></i>
-              </div>
-          </form>
+                    <div class="form-group ml-2" id="loading" style="display: none">
+                        <i class="fa fa-spinner fa-spin fa-2x" aria-hidden="true"></i>
+                    </div>
+                </form>
 
-          <div class="card mx-auto" style="max-width: 500px;" id="output-area">
-            <div class="card-header" id="output-title">
-                Get started
-            </div>
-            <div class="card-body">
-                <p id="output-text">Select a word and click "Create Tweet" to generate Trump Tweets!</p>
-            </div>
-          </div>
+                <div class="card mx-auto" style="max-width: 400px;" id="output-area">
+                    <div class="card-header" id="output-title">
+                        Get started
+                    </div>
+                    <div class="card-body">
+                        <p id="output-text">Select a word and click "Create Tweet" to generate Tweets!</p>
+                    </div>
+                </div>
 
-          <div class="card mx-auto" style="max-width: 350px; margin-top: 150px;">
-            <div class="card-header">
-                Sample Tweet
-            </div>
-            <div class="card-body">
-                <p>"Weak jokers who can do a Trump for president of your nice words from a fantastic job! Thanks!
-                    Thank you. You have not even if a long and we need a terrible that he has a total winner! Fantastic evening last night. I am the U.S. and his show is not."</p>
-            </div>
-          </div>
+                <div class="text-left" id="about">
+                    <h1 class="cover-heading">How does Trump tweets generator work?</h1>
+                    <br>
 
-          <div class="card mx-auto" style="max-width: 350px; margin-top: 20px;">
-            <div class="card-header">
-                Sample Tweet
-            </div>
-            <div class="card-body">
-                <p>"Tremendous damage they will never forget that I have never did you to stop this is the only
-                    candidate who has the great guy and our great people on @foxandfriends interview discussing how come out and your work ethic gives a good for his bad thing. Only the U.S. Supreme Court! Twitter."</p>
-            </div>
-          </div>
+                    <p>Trump tweets generator uses AI/machine learning to generate new Tweets from a sample (training
+                        data) of 36,000+ Tweets.
+                        This process is called "Natural Language Generation". This is a difficult area of machine learning because most ML models are primarily
+                        used for prediction. However, we don't simply want to predict the order of words, because they will sound exactly like the sample. The key is to
+                        introduce some sense of randomness, without completely losing grammatical structure.
+                    </p>
+                    <br>
+                    <p>
+                        This algorithm uses <code>bigram</code> generation to understand the relationship bewteen words. Bigrams are simply the frequency ranking of
+                        words that occur after any word in a corpus. For example, the word <code>you</code> could have a bigram matrix of <code>[["are", 90], ["were", 10]]</code>.
+                        In this example, the word <code>you</code> is followed by the word <code>are</code> 90% of the time, and <code>were</code> 10% of the time. As you generate each word
+                        in a sequence, you then access the bigram matrix for that word, and select a new word that will come after it.
+                    </p>
+                    <br>
+                    <p>
+                        If you simply sample the most common word in each bigram matrix, the sequence generation will eventually loop the same phrase. This tool uses gamma distributions
+                        to sample from the bigram matrix so that the most common word is not always chosen. Different words and parts of speech trigger different distributions,
+                        so that text is generated with some coherence, yet also some randomness.
+                    </p>
+                    <br>
+                    <p>
+                        Libraries used in this tool include:
+                    </p>
+                    <ul>
+                        <li><code>scikit-learn</code></li>
+                        <li><code>nltk</code></li>
+                    </ul>
+                </div>
+            </main>
 
-          <div class="card mx-auto" style="max-width: 350px; margin-top: 20px;">
-            <div class="card-header">
-                Sample Tweet
-            </div>
-            <div class="card-body">
-                <p>"Massive amounts to have the great again! The only person that will never have gone through
-                    results. Think Big win in Chicago sign. Really enjoyed every time ago today, the U.S. will never went down as he would have my vote in our great country needs the great job as your support!"</p>
-            </div>
-          </div>
-
-          <div class="card mx-auto" style="max-width: 350px; margin-top: 20px;">
-            <div class="card-header">
-                Sample Tweet
-            </div>
-            <div class="card-body">
-                <p>"Witch Hunt, they had to be ashamed for president of my full support to be on @foxandfriends interview from a lot to see how much for president of our country. So many of people are a real leader. I love what is the United States, is so badly of my favorite places."</p>
-            </div>
-          </div>
-
-          <div class="card mx-auto" style="max-width: 350px; margin-top: 20px;">
-            <div class="card-header">
-                Sample Tweet
-            </div>
-            <div class="card-body">
-                <p>"Democrats in my full support this is in our great job as bad and will MAKE IT WILL SELDOM FAIL 💯 @paranormalfact: @stevenharlow85 Great interview discussing why the United Kingdom. Prime Minster @AbeShinzo back into U.S. and his first ever before. @mikerotondo86 Only the only way ahead in your favorite TRUMP."</p>
-            </div>
-          </div>
-
-          <div class="card mx-auto" style="max-width: 350px; margin-top: 20px; margin-bottom: 40px;">
-            <div class="card-header">
-                Sample Tweet
-            </div>
-            <div class="card-body">
-                <p>"Fake News. It was no more of my vote on his first place. When I have no idea of our Country has zero respect and to go a nice thank you! It was just a new poll just announced a true patriot support our great guy is the United States."</p>
-            </div>
-          </div>
-
-      </main>
-
-      <footer class="mastfoot mt-auto">
-        <div class="inner">
-          <p>Built with <img src="/static/python-logo.png" alt="python-logo-image-build" width="35" height="35"></p>
+            <footer class="mastfoot mt-auto">
+                <div class="inner">
+                    <p>Built with <img src="/static/python-logo.png" alt="python-logo-image-build" width="35" height="35"></p>
+                </div>
+            </footer>
         </div>
-      </footer>
-    </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-    <script type = "text/javascript" src = "/static/bootstrap.min.js"></script>
-    <script type = "text/javascript" src = "/static/main.js"></script>
-
-  </body>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+        <script type = "text/javascript" src = "/static/bootstrap.min.js"></script>
+        <script type = "text/javascript" src = "/static/main.js"></script>
+    </body>
 </html>
